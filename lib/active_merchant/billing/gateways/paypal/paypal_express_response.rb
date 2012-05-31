@@ -44,6 +44,11 @@ module ActiveMerchant #:nodoc:
            'phone'      => (contact_phone || address['Phone'])
         }
       end
+      
+      def profile_id
+        @params['ProfileID']
+      end
+      
     end
   end
 end
