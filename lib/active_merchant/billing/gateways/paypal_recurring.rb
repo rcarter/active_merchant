@@ -11,8 +11,6 @@ module ActiveMerchant
       self.test_redirect_url = 'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token='
       self.live_redirect_url = 'https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token='
 
-      API_VERSION = '59.0'
-
       def setup_authorization(money, options = {})
         requires!(options, :description, :return_url, :cancel_return_url)
 
