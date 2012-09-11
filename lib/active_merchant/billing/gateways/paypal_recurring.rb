@@ -172,7 +172,7 @@ module ActiveMerchant
               end
               xml.tag! 'n2:RecurringPaymentsProfileDetails' do
                 xml.tag! 'n2:BillingStartDate', (options[:start_date].is_a?(Date) ? options[:start_date].to_time : options[:start_date]).utc.iso8601
-                xml.tag! 'n2:ProfileReference', '151821' # random reference number
+                xml.tag! 'n2:ProfileReference', (options[:profile_reference].present? ? options[:profile_reference] : '151821' ) # random reference number
                 # xml.tag! 'n2:SubscriberName', options[:subscriber_name] unless options[:subscriber_name].blank?
                 # add_address(xml, 'n2:SubscriberShippingAddress', (options[:shipping_address] || options[:address])) if options[:shipping_address] || options[:address]
               end
